@@ -1,4 +1,4 @@
-# Learning Face Age Progression
+# FaceAging
 
 ## References
 
