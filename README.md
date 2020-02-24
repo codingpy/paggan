@@ -1,4 +1,4 @@
-# Learning Face Age Progression
+# GAN
 
 ## References
 
