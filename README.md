@@ -1,4 +1,4 @@
-# GAN
+# PAG-GAN
 
 ## References
 
