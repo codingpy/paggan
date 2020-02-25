@@ -27,7 +27,7 @@ import cv2
 import numpy as np
 
 
-class PyramidGAN:
+class PAGGAN:
     '''Learning Face Age Progression: A Pyramid Architecture of GANs
 
     `Improved Techniques for Training GANs` checklist:
@@ -544,7 +544,7 @@ def cacd(span, channels_last=False):
 
 
 if __name__ == '__main__':
-    gan = PyramidGAN()
+    gan = PAGGAN()
 
     x1 = cacd('21-30')
     x2 = cacd('51-60')
