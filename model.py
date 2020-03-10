@@ -187,7 +187,7 @@ class IntegratedDiscriminator(nn.Module):
             # docker pull bvlc/caffe:gpu
             dex = caffe.Net('age.prototxt', caffe.TEST, weights='dex_chalearn_iccv2015.caffemodel')
 
-            tensors = list()
+            tensors = []
 
             for param in dex.params.values():
                 for i in range(2):
@@ -210,7 +210,7 @@ class IntegratedDiscriminator(nn.Module):
         # subtracts the image mean from each image
         h = x - self.mu
 
-        x = list()
+        x = []
 
         i = 0
 
@@ -508,7 +508,7 @@ class ReplayBuffer:
         if len(data) < data.maxlen:
             data.extend(imgs)
         else:
-            rets = list()
+            rets = []
 
             for img in imgs:
                 if np.random.rand() < 0.5:
@@ -527,7 +527,7 @@ def cacd(span, channels_last=False):
     # eyes' center:
     #   ( 80.22166667, 106.36333333)
     #   (142.20916667, 106.28666667)
-    x = list()
+    x = []
 
     for path in glob.glob(f'CACD2000/{span}/*.jpg'):
         # BGR
