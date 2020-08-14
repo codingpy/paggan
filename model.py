@@ -83,8 +83,8 @@ class PAGGAN:
             drop_last=True,
         )
 
-        data1 = foreveriter(loader1)
-        data2 = foreveriter(loader2)
+        data1 = cycle(loader1)
+        data2 = cycle(loader2)
 
         buffer = ReplayBuffer(size=50)
 
@@ -492,7 +492,7 @@ class DeepFaceDescriptor(nn.Module):
         return h
 
 
-def foreveriter(iterable):
+def cycle(iterable):
     while True:
         for x in iter(iterable):
             yield x
